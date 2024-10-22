@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+:root{
+  --mainColor:#E04343;
+  --secondryColor:#FFE800;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #fefefe;
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+}
+i{
+  cursor: pointer;
+  transition: all 0.5s;
+  /* color: #333 !important; */
+}
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    Loading    $$$$$$$$$$$$$$$$$$$$$ */
+
+#loading{
+  background-color: var(--mainColor);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loading i{
+  color: var(--secondryColor) !important;
+}
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    arrowTop    $$$$$$$$$$$$$$$$$$$$$ */
+
+#arrowTop {
+  background-color: var(--secondryColor) !important;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 9999;
+}
+#arrowTop i{
+  color: var(--mainColor) !important;
+}
+                          /* $$$$$$$$$$$$$$$$$$$$$    colorBox    $$$$$$$$$$$$$$$$$$$$$ */
+
+#colorChange{
+  position: fixed;
+  top: 250px;
+  left: 0;
+  z-index: 999;
+}
+#colorChange i{
+  height: fit-content;
+  padding: 15px 10px;
+  background-color: var(--mainColor);
+  color: var(--secondryColor);
+}
+#colorChange .colorOptions li{
+  /* background-color: var(--secondryColor); */
+  width: 90%;
+  height: 25px;
+  border-radius: 10px;
+  display: inline-block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+#colorChange .colorOptions{
+  border: 3px solid var(--mainColor);
+}
+
+#colorChange .colorOptions .color1 {
+  background: linear-gradient(to bottom, #E04343,#FFE800);
+}
+#colorChange .colorOptions .color2 {
+  background: linear-gradient(to bottom, #FF69B4,#8BC34A);
+}
+#colorChange .colorOptions .color3 {
+  background: linear-gradient(to bottom, #2E073F,#EBD3F8);
+}
+#colorChange .colorOptions .color4 {
+  background: linear-gradient(to bottom, #55AD9B,#F1F8E8);
+}
+#colorChange .colorOptions .color5 {
+  background: linear-gradient(to bottom, #C96868,#7EACB5);
+}
+#colorChange .colorOptions .color6 {
+  background: linear-gradient(to bottom, #32012F,#F97300);
+}
+
+
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    HOME => section    $$$$$$$$$$$$$$$$$$$$$ */
+
+                          
+
+#home .navbar img{
+  width: 60px ;
+}
+#home .nav-item{
+  padding: 0 6px;
+  text-transform: uppercase;
+}
+#home .navbar a{
+  font-weight: bold;
+  color: #333  ;
+}
+#home .nav-item a{
+  transition: all 0.3s;
+  font-weight: bold;
+}
+#home .active{
+  border-top: 3px dotted var(--mainColor);
+  color: var(--mainColor) !important;
+}
+#home li:hover a , #home .script, #home .navbar i:hover{
+  color: var(--mainColor) !important;
+}
+/* ^nav */
+#home .homeImg img{
+  width: 550px;
+}
+#home .caption h1{
+  font-size: 60px;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.651);
+}
+#home .caption span{
+  font-weight: 800;
+  color: var(--mainColor);
+  text-shadow: 1px 1px 1px var(--secondryColor);
+}
+#home .caption .secondR{
+  color: var(--secondryColor);
+  text-shadow: 1px 1px var(--mainColor);
+}
+#home .caption h3{
+  color: var(--mainColor);
+}
+#home .caption .myBtn:hover{
+  background-color: var(--mainColor);  
+}
+#home .caption .myBtn{
+  color: rgba(0, 0, 0, 0.651);
+  border-radius: 20px 0;
+  outline: 2px solid var(--secondryColor);
+  /* background-color: #ec5757; */
+}
+
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    ABOUT => section    $$$$$$$$$$$$$$$$$$$$$ */
+
+#about{
+background-color: var(--mainColor);
+}
+#about .secondText{
+  color: var(--secondryColor);
+}
+#about h3{
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 4px;
+}
+#about .aboutCaption p{
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    SKILLS => section    $$$$$$$$$$$$$$$$$$$$$ */
+
+#skills h3{
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.74);
+}
+#skills .skillsCaption .secondText{
+  color: var(--mainColor);
+  text-shadow: 2px 2px  var(--secondryColor);
+}
+#skills .skillsCaption p{
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+#skills .skillsBars .about-progress .progress-bar{
+background-color: var(--mainColor);
+}
+
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    PROJECTS => section    $$$$$$$$$$$$$$$$$$$$$ */
+
+
+
+#projects .header{
+    text-transform: uppercase;
+    color: var(--mainColor);
+    font-size: 22px;
+    width: fit-content;
+    height: 100px;
+    border-radius: 0 40px;
+    box-shadow: -15px 15px 30px var(--secondryColor);
+    letter-spacing: 1px;
+    line-height: 1.7;
+    transition: all 0.5s;
+}
+#projects .header:hover {
+      background-color: var(--mainColor);
+      color: var(--secondryColor);
+}
+#projects .projectFrame .projectBg{
+  height: 350px;
+  width: 300px;
+  /* border: 12px solid rgba(0, 0, 0, 0.3) ; */
+  border: 12px solid var(--mainColor);
+  border-radius: 10%;
+}
+#projects .project{
+  /* border: 1px solid var(--mainColor); */
+  border-radius: 0 20px;
+  top: 30px;
+  left: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+#projects .projectFrame .projImg{
+  /* background-image: url(../images/59893-O9J0NF-968.jpg);
+  background-size: contain;
+  background-repeat: no-repeat; */
+  height: 300px;
+  width: 300px;
+}
+#projects .projectFrame .projImg img{
+  transition: all 0.3s;
+}
+#projects .projectFrame .projLayer{
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1s;
+  transition-delay: 0.3s;
+}
+#projects .projectFrame .project:hover .projLayer{
+  opacity: 1;
+  transform: translateY(0);
+}
+#projects .projectFrame .project:hover img{
+  transform: scale(1.2,1.2);
+}
+#projects .projectFrame .projLayer a{
+  text-decoration: none;
+  color: var(--secondryColor);
+}
+#projects .projectFrame .projLayer a:hover{
+  color: var(--mainColor);
+}
+
+
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    dropMeLine => section    $$$$$$$$$$$$$$$$$$$$$ */
+
+#dropMeLine{
+  height: 300px;
+  background-color: var(--mainColor);
+}
+#dropMeLine a{
+  padding: 20px 30px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  font-size: 20px;
+  background-color: transparent;
+  outline: 2px solid var(--secondryColor);
+  color: var(--secondryColor);
+  transition: all 0.3s;
+}
+#dropMeLine a:hover{
+  background-color: var(--secondryColor);
+  color: var(--mainColor);
+}
+
+
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    testimonials => section    $$$$$$$$$$$$$$$$$$$$$ */
+
+#testimonials  h3{
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.74);
+}
+#testimonials .secondText{
+  color: var(--mainColor);
+  text-shadow: 2px 2px  var(--secondryColor);
+}
+#testimonials .testimonialsContainer .card{
+  padding: 15px;
+  border: 2px solid var(--secondryColor);
+  box-shadow: 2px 2px 2px var(--secondryColor);
+  border-radius: 0 20%;
+  transition: all 0.5s;
+  height: 400px;
+  -webkit-border-radius: 0 20%;
+  -moz-border-radius: 0 20%;
+  -ms-border-radius: 0 20%;
+  -o-border-radius: 0 20%;
+}
+#testimonials .testimonialsContainer .card:hover{
+  border: 2px solid var(--mainColor);
+  box-shadow: 5px 5px 5px var(--mainColor);
+}
+#testimonials .testimonialsContainer .card img{
+  width: 100px;
+  height: 100px;
+}
+#testimonials .testimonialsContainer .card h5{
+  color: var(--mainColor);
+}
+#testimonials .testimonialsContainer h5{
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  padding: 10px ;
+}
+#testimonials .testimonialsContainer .dot{
+  width: 15px;
+  height: 15px;
+  background-color: var(--mainColor);
+  border-radius:30%;
+  -webkit-border-radius:30%;
+  -moz-border-radius:30%;
+  -ms-border-radius:30%;
+  -o-border-radius:30%;
+}
+#testimonials .owl-prev{
+  width: 100px;
+  height: 50px;
+}
+#testimonials .owl-nav{
+  font-size: 40px !important;
+  padding: 15px;
+  color: var(--mainColor);
+}
+
+
+
+
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    Contact => section    $$$$$$$$$$$$$$$$$$$$$ */
+
+
+#contact .secondText{
+  color: var(--mainColor);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+}
+#contact .contactInfo{
+  border-bottom: 2px solid var(--mainColor);
+  padding: 40px 0;
+  transition: all 1s;
+}
+#contact .contactInfo:hover{
+  border-bottom: 2px solid var(--secondryColor);
+  transform: translateY(-15px);
+}
+#contact .contactInfo p,#contact .contactInfo i{
+  color: gray;
+}
+#contact .contactForm button{
+  background-color: var(--mainColor);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+#contact .contactForm button:hover{
+  /* background-color: var(--secondryColor); */
+  box-shadow: 5px 5px 15px var(--secondryColor);
+  color: var(--secondryColor) !important;
+}
+
+
+
+                          /* $$$$$$$$$$$$$$$$$$$$$    footer => section    $$$$$$$$$$$$$$$$$$$$$ */
+
+#footer{
+  background-color: var(--mainColor);
+}
+#footer .caption a:hover, #footer .social-icons i:hover{
+  color: var(--secondryColor) !important;
+}
+#footer .social-icons i , #footer .caption a{
+  transition:all 0.3s;
+  -webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+  -ms-transition:all 0.3s;
+  -o-transition:all 0.3s;
+}
